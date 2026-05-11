@@ -7,9 +7,9 @@ def run():
     while True:
         # Debugging step:
         # time.sleep(5)
-        for i in range(0,999):
-            number=f"{i:03}"
-            guess=str("{}{}{}".format(random.choice(words).lower(),random.choice(words).lower(),number))
+        for i in range(0,9):
+            number=f"{i:01}"
+            guess=str("{}-{}{}-{}".format(random.choice(words).lower(), random.choice(words).lower(), number, random.choice(words)))
             if guess not in wordlist:
                 if len(guess) >= 12 and len(guess) <=30:
                     wordlist.add(guess)
